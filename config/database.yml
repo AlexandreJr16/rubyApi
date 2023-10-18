@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: invoiced_development
+  username: postgres
+  password: 10050600
+
+test:
+  <<: *default
+  database: invoiced_test
+  username: postgres
+  password: 10050600
+
+production:
+  <<: *default
+  database: invoiced_production
+  username: postgres
+  password: 10050600
