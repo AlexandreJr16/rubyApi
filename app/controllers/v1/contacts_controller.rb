@@ -21,7 +21,6 @@ class V1::ContactsController < ApplicationController
     else
       head(:unprocessable_entity)
     end
-
   end
 
 
